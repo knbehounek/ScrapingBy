@@ -5,8 +5,9 @@ var mongoose = require('mongoose');
 var db = require("../models"); 
 
 /* Mongoose Configuration */ 
+var MONGODB_URI = process.env.MONGODB_URI ||
 mongoose.Promise = Promise; 
-mongoose.connect("https://sleepy-brushlands-46780.herokuapp.com/", { // Connect to the Mongo DB
+mongoose.connect(MONGODB_URI, { // Connect to the Mongo DB
 });
 
 
