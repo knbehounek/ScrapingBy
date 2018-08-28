@@ -1,0 +1,102 @@
+
+<!-- Nav Bar -->
+<nav>
+  <div class="nav-wrapper">
+    <ul class="">
+      <a href="#" class="" >NPR News</a>
+      <li class="active"><a href="#">Home</a></li>
+      <li  class="" href="#saveModal"><a>Saved Articles</a></li>
+    </ul>
+    <ul class="">
+      <li><a class="searchArticle"> Scrape </a></li>
+    </ul>
+    <ul class="">
+      <li class="savedArticles" href="#saveModal"><a>Saved Articles</a></li>
+    </ul>
+    <ul class="">
+      <li><a class="searchArticle">add</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Main Container -->
+<div class="container">
+  <div class="">
+    {{#each data}}
+      <div class="" id="{{this.url}}" >
+        <div class="" >
+          <div class="card-body">
+            <div></div>
+            <img src="{{this.imageURL}}">
+            <span class="card-title">{{this.headline}}</span>
+            <a class="addArticle modal-trigger" href="#modalMessage" data-headline="{{this.headline}} " data-imageURL="{{this.imageURL}}" data-url="{{this.url}}" data-summary="{{this.summary}}"
+              data-slug="{{this.slug}}">add</a>
+          </div>
+          <div class="card-content">
+            <span class="card-title">{{this.slug}}more_vert</span>
+            <p><a href="{{this.url}}">Link to Article</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title">{{this.slug}}close</span>
+            <p>{{this.summary}}</p>
+          </div>
+
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+<!-- Modals -->
+
+<!-- Message Modal -->
+<div id="modalMessage" class="modal">
+  <div class="">
+    <h4>Article Sucessfully Saved!</h4>
+  </div>
+</div>
+
+<!-- Individual Saved Article Modal -->
+<div id="articleModal" class="modal">
+  <div class="modal-content center">
+    <h4>Article <span id="articleID"></span></h4>
+    <div class="articleNotes">
+      <div class="boxComments">
+        <div class="">
+          <div class="">
+            <div class="card-image">
+              <img src="https://lorempixel.com/100/190/nature/6">
+            </div>
+            <div class="">
+              <div class="">
+                <p>No Notes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <form class="">
+        <div class="row">
+          <div class="input-field">
+            <textarea id="textarea1" class="materialize-textarea"></textarea>
+            <label for="textarea1">Textarea</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-actio addComment">Add</a>
+  </div>
+</div>
+
+<!-- Slide UP Articles Modal Structure -->
+<div id="saveModal" class="">
+  <div class="">
+    <h4>Saved Articles</h4>
+    <ul class="collection">
+    </ul>
+  </div>
+</div>
