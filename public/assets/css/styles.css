@@ -1,11 +1,15 @@
 body {
-    background: lightgray
+    background: lightgray;
 }
 
 nav {
-    background: gray
+    background: gray;
 }
 
 #modalMessage {
-    background: gray
+    background: gray;
+}
+
+.btn-floating i {
+    background-color: black;
 }
